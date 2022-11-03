@@ -11,36 +11,49 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //CREANDO UN OBJETO DE LA CLASE SCANNER
         Scanner entradaPorTeclado=new Scanner(System.in);
-       //creando objeto de la clase invitado
         Invitado objetoInvitado = new Invitado();
-        objetoInvitado.nombre = "Veronica";
-        objetoInvitado.apellido = "Montoya";
-        objetoInvitado.aplicaCover = true;
-        objetoInvitado.id = "12345";
-        objetoInvitado.disfraz = 'A';
-        objetoInvitado.edad = 25;
-        objetoInvitado.valorCover = 60000;
-
-        //creando objeto de la clase invitado
-        Invitado objetoInvitado2=new Invitado();
-       objetoInvitado2.agregarInvitado();
-
-        //MOSTRANDO LOS VALORES DE NUESTROS ATRIBUTOS
-        objetoInvitado.mostrarInvitado();
-        objetoInvitado2.mostrarInvitado();
-
-
-
-
-
-
-
-        // CREANDO OBJETO DE LA CLASE LUGAR
         Lugar objetoLugar = new Lugar();
-
-        //CREANDO OBJETO DE LA CLASE FIESTA
         Fiesta objetoFiesta = new Fiesta();
+
+        //DEFINIENDO COSTOS DE LA FIESTA
+        System.out.println("****** GRAN FIESTA GRUPO URIBE *********");
+        System.out.println("****************************************");
+
+        System.out.println("1. Digita el costo de la comida: ");
+        double costoAlimentos = entradaPorTeclado.nextDouble();
+        if (costoAlimentos>0) {
+            objetoFiesta.costosAlimentos=costoAlimentos;
+        } else {
+            System.out.println("Ingrese un valor valido");
+        }
+        System.out.println("El costo de alimentos fue: "+objetoFiesta.costosAlimentos);
+
+        System.out.println("1. Digita el costo de las bebidas: ");
+        double costoBebidas = entradaPorTeclado.nextDouble();
+        if (costoBebidas>0) {
+            objetoFiesta.costosBedidas=costoBebidas;
+        } else {
+            System.out.println("Ingrese un valor valido");
+        }
+        System.out.println("El costo de bebidas fue: "+objetoFiesta.costosBedidas);
+
+        System.out.println("1. Digita el costo del lugar: ");
+        double costoLugar = entradaPorTeclado.nextDouble();
+        if (costoLugar>0) {
+            objetoFiesta.costosLugar=costoLugar;
+        } else {
+            System.out.println("Ingrese un valor valido");
+        }
+        System.out.println("El costo del lugar fue: "+objetoFiesta.costosLugar);
+
+        System.out.println("1. Digita el costo del equipo: ");
+        double costoEquipo = entradaPorTeclado.nextDouble();
+        if (costoEquipo>0) {
+            objetoFiesta.costosEquipos=costoEquipo;
+        } else {
+            System.out.println("Ingrese un valor valido");
+        }
+        System.out.println("El costo del equipo fue: "+objetoFiesta.costosEquipos);
     }
 }
